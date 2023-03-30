@@ -23,7 +23,7 @@ def obter_tarefa(tarefa_id: int | str):
     # fail fast
     if not tarefa:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND,
-                            detail=f'Não há filme com id = {tarefa_id }')
+                            detail=f'Não há tarefa com id = {tarefa_id }')
 
     return tarefa
 
