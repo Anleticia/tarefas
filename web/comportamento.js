@@ -138,7 +138,7 @@ function configurar_formulario(){
 
         console.log('Submeteu!!!')
         // console.log(dados)
-        // console.log('Filme: ', filme)
+        // console.log('Tarefa: ', tarefa)
         let url = baseURL+'/criar'
         let method = 'POST'
         let mensagem_ok = 'Tarefa Adicionado com sucesso!'
