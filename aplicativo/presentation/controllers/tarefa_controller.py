@@ -53,3 +53,13 @@ def atualizar_tarefa(tarefa_id: int | str, tarefa: Tarefa):
                             detail="Tarefa não encontrado")
 
     return tarefa_repository.atualizar(tarefa_id, tarefa)
+
+@routes.put('/{tarefa_id}/cancelar')
+def cancelar_tarefa(tarefa_id: int | str):
+    tarefa_encontrado = tarefa_repository.obter_um(tarefa_id)
+
+    if not tarefa_encontrado:
+        raise HTTPException(status.HTTP_404_NOT_FOUND,
+                            detail="Tarefa não encontrado")
+
+    return tarefa_repository.cancelar(tarefa_id)
